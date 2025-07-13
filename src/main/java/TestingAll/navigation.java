@@ -30,7 +30,7 @@ public class navigation{
 
 		driver.get("http://google.com");
 
-		driver.navigate().to("https://rahulshettyacademy.com");
+		driver.navigate().to("https://wrahulshettyacademy.com");
 
 		driver.navigate().back();
 

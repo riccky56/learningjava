@@ -34,7 +34,6 @@ public class dropdownstatic {
 			driver.findElement(By.id("hrefIncAdt")).click();
 		}
 
-
 		driver.findElement(By.id("btnclosepaxoption")).click();
 
 		Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");

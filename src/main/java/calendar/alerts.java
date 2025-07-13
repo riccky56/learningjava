@@ -30,6 +30,8 @@ public class alerts {
 		driver.switchTo().alert().dismiss();
 		
 		driver.switchTo().newWindow(WindowType.TAB);
+		
+		
 		//Authetication POPUP
 		driver.get("http://the-internet.herokuapp.com/basic_auth");
 		try {
