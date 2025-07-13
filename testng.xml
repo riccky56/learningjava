@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name="pagesfortest.mylisteners" />
+<listener class-name="pagesfortest.mylisteners1" />
 </listeners>
   <test thread-count="5" name="Test">
         <!--  <groups>
@@ -14,8 +14,8 @@
            </run>
         </groups> -->
     <classes>
-      <class name="pagesfortest.loginTest"/>
-      <class name="pagesfortest.Sauce"/>
+      <class name="pagesfortest.loginTest2"/>
+      <class name="pagesfortest.Sauce2"/>
       
     </classes>
   </test> <!-- Test -->

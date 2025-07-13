@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginpage {	
+public class loginpage1 {	
 
 	//constructor
-	public loginpage(WebDriver driver)
+	public loginpage1(WebDriver driver)
 	{
 
 		PageFactory.initElements(driver, this);

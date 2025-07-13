@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import pagesfortest.Browsersetup;
 
-public class Sauce extends Browsersetup {
+public class Sauce2 extends Browsersetup {
 
 
     @BeforeTest
@@ -53,7 +53,7 @@ public class Sauce extends Browsersetup {
 	}
 
 
-    @Test(retryAnalyzer = pagesfortest.Retry.class)
+    @Test(retryAnalyzer = pagesfortest.Retry1.class)
 	public void secondtest () throws InterruptedException {
 
 

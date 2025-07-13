@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeTest;
 
-public class Browsersetup {
+public class Browsersetup1 {
 
 
 	public static WebDriver driver;
