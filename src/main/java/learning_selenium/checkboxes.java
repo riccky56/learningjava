@@ -30,8 +30,7 @@ public class checkboxes {
 		{
 			allcheckboxes.get(i).click();
 		}
-		
-		
+
 		
 	}
 
