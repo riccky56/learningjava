@@ -1,7 +1,13 @@
 package calendar;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
@@ -9,7 +15,7 @@ import org.testng.Assert;
 
 public class a {
 	static WebDriver driver;
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		WebDriver driver =new ChromeDriver();
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/"); //URL in the browser
@@ -23,6 +29,14 @@ public class a {
 		System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
 
 		Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+		
+		 WebElement ele =driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']"));
+		 
+		 //Just screenshot of any element
+		 File src = ele.getScreenshotAs(OutputType.FILE);
+		 
+		 FileUtils.copyFile(src, new File ("logo.png"));
+		 
 
 	}
 
