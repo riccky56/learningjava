@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name="pagesfortest.mylisteners1" />
+<listener class-name="utilities.ExtentReportManager" />
 </listeners>
   <test thread-count="5" name="Test">
         <!--  <groups>
