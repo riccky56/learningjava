@@ -30,7 +30,7 @@ public class readexcel {
 			
 			for(int c=0; c<totalcol; c++) {
 				
-				XSSFCell cell = currentRow.getCell(c);
+				XSSFCell cell = currentRow.getCell(c);  //   cell.getStringCellValue()
 				cell.toString();
 				System.out.print(cell.toString() + "\t");
 				
