@@ -1,9 +1,7 @@
-package action;
+package webtablesandjavascript;
 
-import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class javascriptdemo {
@@ -26,10 +24,6 @@ public class javascriptdemo {
 		js.executeScript("document.body.style.zoom='70%'");
 
 		js.executeScript("document.body.style.zoom='90%'");
-		
-		
-		WebElement ele = null;
-		js.executeScript("windows.scrollIntoView(true)",ele );
 
 
 

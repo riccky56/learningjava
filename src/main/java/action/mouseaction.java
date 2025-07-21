@@ -5,10 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class mouseaction {
-	static WebDriver driver;
+	public static WebDriver driver;
 	public static void main(String[] args) throws Exception {
 		
-		WebDriver driver = new ChromeDriver();
+		 driver = new ChromeDriver();
 		
 		driver.get("https://demo.opencart.com/");
 		Thread.sleep(2000);
