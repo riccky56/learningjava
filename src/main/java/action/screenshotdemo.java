@@ -1,4 +1,4 @@
-package learning_selenium;
+package action;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +18,8 @@ public class screenshotdemo {
 		driver.get("https://google.com");
 		driver.manage().window().maximize();
 		
-	
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE) ;
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE) ;
 		
 		FileUtils.copyFile(src, new File ("C:\\Users\\911374\\eclipse-workspace\\Learning\\screenshots\\new.png"));
 		
