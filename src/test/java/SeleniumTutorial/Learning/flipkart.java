@@ -32,7 +32,7 @@ public class flipkart extends flipkartbrowser{
 		driver.findElement(By.xpath("//div[@class='I-qZ4M vLRlQb']/input")).sendKeys("9131042507");
 		driver.findElement(By.xpath("(//*[normalize-space()='Request OTP'])[1]")).click();
 		
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		WebElement search = driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']")); 
 		Thread.sleep(2000);
 		search.sendKeys("Samsung s22");
@@ -82,7 +82,11 @@ public class flipkart extends flipkartbrowser{
 		driver.findElement(By.xpath("//button[@class='QqFHMw zA2EfJ _7Pd1Fp']")).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("(//*[@type='radio'])[2]")).click();
+		driver.findElement(By.xpath("(//*[@type='radio'])[1]")).click();
+		
+		driver.findElement(By.xpath("//button[text()='Deliver Here']")).click();
+		
+		driver.findElement(By.xpath("//*[text()='Remove']")).click();
 		
 		
 		
