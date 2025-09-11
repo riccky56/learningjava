@@ -11,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-
-
 public class a {
 	static WebDriver driver;
 	public static void main(String[] args) throws IOException {
