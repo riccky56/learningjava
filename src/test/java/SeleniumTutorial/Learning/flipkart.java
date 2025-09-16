@@ -82,11 +82,17 @@ public class flipkart extends flipkartbrowser{
 		driver.findElement(By.xpath("//button[@class='QqFHMw zA2EfJ _7Pd1Fp']")).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("(//*[@type='radio'])[1]")).click();
+		driver.findElement(By.xpath("//label[@for='CNTCTEBA86BE860DE4374BF5D84563']//div[@class='qsHXPi']")).click();
+		
+		//driver.findElement(By.xpath("(//*[@type='radio'])[1]")).click();
 		
 		driver.findElement(By.xpath("//button[text()='Deliver Here']")).click();
 		
+		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("//*[text()='Remove']")).click();
+		
+		driver.close();
 		
 		
 		

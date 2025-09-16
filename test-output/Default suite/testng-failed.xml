@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="action.Svgelement">
+      <class name="SeleniumTutorial.Learning.flipkart">
         <methods>
-          <include name="method1"/>
+          <include name="teststart"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- action.Svgelement -->
+      </class> <!-- SeleniumTutorial.Learning.flipkart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

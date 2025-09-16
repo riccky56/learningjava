@@ -2,16 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-26T13:36:01 IST" name="Default suite" finished-at="2025-08-26T13:36:12 IST" duration-ms="10923">
+  <suite started-at="2025-09-16T17:17:09 IST" name="Default suite" finished-at="2025-09-16T17:18:02 IST" duration-ms="53698">
     <groups>
     </groups>
-    <test started-at="2025-08-26T13:36:01 IST" name="Default test" finished-at="2025-08-26T13:36:12 IST" duration-ms="10923">
-      <class name="action.Svgelement">
-        <test-method signature="method1()[pri:0, instance:action.Svgelement@1d296da]" started-at="2025-08-26T13:36:01 IST" name="method1" finished-at="2025-08-26T13:36:12 IST" duration-ms="10856" status="PASS">
+    <test started-at="2025-09-16T17:17:09 IST" name="Default test" finished-at="2025-09-16T17:18:02 IST" duration-ms="53698">
+      <class name="SeleniumTutorial.Learning.flipkart">
+        <test-method is-config="true" signature="start()[pri:0, instance:SeleniumTutorial.Learning.flipkart@7817fd62]" started-at="2025-09-16T17:17:09 IST" name="start" finished-at="2025-09-16T17:17:18 IST" duration-ms="9196" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- method1 -->
-      </class> <!-- action.Svgelement -->
+        </test-method> <!-- start -->
+        <test-method signature="teststart()[pri:0, instance:SeleniumTutorial.Learning.flipkart@7817fd62]" started-at="2025-09-16T17:17:18 IST" name="teststart" finished-at="2025-09-16T17:18:02 IST" duration-ms="44466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teststart -->
+      </class> <!-- SeleniumTutorial.Learning.flipkart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
