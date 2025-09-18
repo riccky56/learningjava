@@ -33,6 +33,7 @@ public class ebay_suggestion_box  {
 			suggestionscreen.add(option.getText());
 			
 			
+			
 		/*   Thread.sleep(2000);
 			if(option.getText().equalsIgnoreCase("mobile homes for sale")) {
 				option.click();
