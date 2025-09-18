@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumTutorial.Learning.flipkart">
+      <class name="pagestest.Sauce2">
         <methods>
-          <include name="teststart"/>
+          <include name="LoginPage"/>
+          <include name="thirdtest"/>
           <include name="start"/>
+          <include name="secondtest"/>
+          <include name="cleanupMethod"/>
         </methods>
-      </class> <!-- SeleniumTutorial.Learning.flipkart -->
+      </class> <!-- pagestest.Sauce2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
