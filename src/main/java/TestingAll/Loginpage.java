@@ -24,7 +24,7 @@ public class Loginpage extends Browser {
 		
 	}
 	
-	@Test(priority=1,description="thisis atest method")
+	@Test(priority=1,description="this is atest method")
 	public void Name2()
 	{
 		System.out.println("this is a test");
