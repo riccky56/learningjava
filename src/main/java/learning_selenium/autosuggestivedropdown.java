@@ -15,6 +15,7 @@ public class autosuggestivedropdown {
 		
 
 		driver=new ChromeDriver();
+		driver.manage().window().maximize();
 	
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
