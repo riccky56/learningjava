@@ -17,4 +17,9 @@ public class ebay {
 
 	public static void close() {
 		driver.close();
-}}
+}
+	
+		}
+
+
+ 

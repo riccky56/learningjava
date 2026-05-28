@@ -32,6 +32,7 @@ public class readexcel {
 				
 				XSSFCell cell = currentRow.getCell(c);  //   cell.getStringCellValue()
 				cell.toString();
+				
 				System.out.print(cell.toString() + "\t");
 				
 			}
