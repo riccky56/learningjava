@@ -11,10 +11,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class autosuggestivedropdown {
 	public static WebDriver driver;
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+		
 		
 
 		driver=new ChromeDriver();
+		driver.manage().window().maximize();
 	
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 

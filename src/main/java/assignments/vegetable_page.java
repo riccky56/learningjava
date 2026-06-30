@@ -17,6 +17,8 @@ public class vegetable_page {
 		String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot","Tomato","Carrot"};
 
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
+		
+		driver.manage().window().maximize();
 		Thread.sleep(3000);
 
 		List<WebElement> products=driver.findElements(By.cssSelector("h4.product-name"));
@@ -35,7 +37,7 @@ public class vegetable_page {
 			if(itemsNeededList.contains(formattedName))
 
 			{
-				j++; // to increment teh value of clicking the button
+				j++; // to increment the value of clicking the button
 
 				//click on Add to cart
 
