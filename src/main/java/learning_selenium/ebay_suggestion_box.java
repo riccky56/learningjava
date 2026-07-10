@@ -26,7 +26,8 @@ public class ebay_suggestion_box  {
 				
 		List<WebElement> getAllSuggestion = driver.findElements(By.xpath("//*[@role='listbox']/li")); // suggestion box
 		
-		ArrayList suggestionscreen = new ArrayList();             //store the webelements in the arraylist 
+		
+		ArrayList suggestionscreen = new ArrayList(); //store the webelements in the arraylist 
 		
 		for( WebElement option : getAllSuggestion)               //iterate for every element get the text and add in the list
 		{
