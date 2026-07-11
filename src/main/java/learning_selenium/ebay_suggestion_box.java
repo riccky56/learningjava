@@ -19,6 +19,7 @@ public class ebay_suggestion_box  {
 		System.out.println(a);
 		
 		search.sendKeys("mobile");
+		
 		Thread.sleep(2000);
 	    search.click();
 		Thread.sleep(2000);
