@@ -28,6 +28,8 @@ public class Svgelement {
 		driver.findElement(By.xpath("//a[normalize-space()='Practice Form']//*[name()='svg']")).click();
 
 
+
+		
 	}
 
 }
