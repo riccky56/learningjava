@@ -33,12 +33,10 @@ public class GetAllProducts {
 
 			String title = product.findElement(By.className("shelf-item__title")).getText();
 
-			// Price is split across small + b + span (e.g. "$" + "799" + ".00")
-			// String currency = product.findElement(By.cssSelector(".shelf-item__price .val
-			// small")).getText();
+			
+		
 			String price = product.findElement(By.cssSelector(".shelf-item__price .val b")).getText();
-			// String fraction = product.findElement(By.cssSelector(".shelf-item__price .val
-			// span")).getText();
+		
 
 			System.out.println("Phone is " + title + " and price is: " + price);
 
