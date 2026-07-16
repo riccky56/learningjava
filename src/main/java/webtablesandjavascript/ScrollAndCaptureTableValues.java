@@ -34,13 +34,11 @@ public class ScrollAndCaptureTableValues {
 				}
 			}
 
-			// 2. Scroll down within the container (not the page, if it's an inner
-			// scrollable div)
+			// 2. Scroll down within the container (not the page, if it's an inner scrollable div)
 			js.executeScript("arguments[0].scrollTop = arguments[0].scrollTop + arguments[0].clientHeight;",
 					scrollContainer);
 
-			// 3. Wait for new rows to render (replace with explicit wait / fluent wait as
-			// needed)
+			// 3. Wait for new rows to render (replace with explicit wait / fluent wait as needed)
 			try {
 				Thread.sleep(800); // swap for WebDriverWait on row count/staleness in real code
 			} catch (InterruptedException e) {
