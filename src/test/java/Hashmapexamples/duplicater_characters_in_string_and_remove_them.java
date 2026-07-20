@@ -10,6 +10,7 @@ public class duplicater_characters_in_string_and_remove_them {
 
 		String a = "cabbage";
 
+		
 		LinkedHashSet<Character> set = new LinkedHashSet<>();
 
 		for (char c : a.toCharArray()) {
@@ -18,6 +19,7 @@ public class duplicater_characters_in_string_and_remove_them {
 		System.out.print(set);
 
 		System.out.println("");
+		
 		String b = "";
 		for (char c : set)
 		{		

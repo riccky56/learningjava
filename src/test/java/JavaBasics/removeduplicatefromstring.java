@@ -7,9 +7,12 @@ public class removeduplicatefromstring {
 		
 		String a = "cabbage";
 		String b = "";
+		
+		
 		for(int i=0; i<=a.length()-1; i++) {
 			char ch = a.charAt(i);
 		
+			
 				if(b.indexOf(ch) == -1)
 				{
 					b = b + ch;

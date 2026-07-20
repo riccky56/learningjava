@@ -1,5 +1,5 @@
 package JavaBasics;
-
+import java.util.Arrays;
 public class exercise_array {
 
 		 public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class exercise_array {
 		        for (int i = numbers.length - 1; i >= 0; i--) {
 		            System.out.println(numbers[i]);
 		        }
+		       
 		 
 		        // 4. Bonus: Element Count
 		        System.out.println("Total elements in the array: " + numbers.length);
