@@ -1,6 +1,5 @@
 package Hashmapexamples;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 public class duplicater_characters_in_string_and_remove_them {
