@@ -6,21 +6,21 @@ public class primetill200 {
 
 		System.out.println("Prime numbers till 200 are : ");
 
-		for(int number=2; number<=200; number++) {
-			boolean isPrime=true;
+		for (int number = 2; number <= 200; number++) {
+			boolean isPrime = true;
 
+			for (int i = 2; i <= Math.sqrt(number); i++) {
+				// for(int i=2; i<=number/2; i++) {
 
-			for(int i=2; i<=Math.sqrt(number); i++) {        
-
-				if(number%i==0) {
-					isPrime=false;
+				if (number % i == 0) {
+					isPrime = false;
 					break;
-				} 		  
+				}
 
 			}
-			if(isPrime) {
-				System.out.println(number + " ");
-			}
+			if (isPrime) {
+				System.out.print(number + ",");	
+			}	
 
 		}
 	}

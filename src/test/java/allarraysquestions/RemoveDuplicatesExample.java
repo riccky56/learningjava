@@ -22,10 +22,8 @@ public class RemoveDuplicatesExample {
 		// fast = scout that checks every element ahead
 		for (int fast = 1; fast < arr.length; fast++) {
 			if (arr[fast] != arr[slow]) {
-				
 				slow++;
 				arr[slow] = arr[fast];
-					
 			}
 		}
 
@@ -33,7 +31,6 @@ public class RemoveDuplicatesExample {
 
 		// print only the unique part of the array (first newLength elements)
 		int[] uniquePart = Arrays.copyOf(arr, newLength);
-		 
 
 		System.out.println("New length: " + newLength);
 		System.out.println("Array after removing duplicates: " + Arrays.toString(uniquePart));
