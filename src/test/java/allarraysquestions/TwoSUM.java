@@ -18,8 +18,7 @@ public class TwoSUM {
 		while (left < right) {
 			int sum = arr[left] + arr[right];
 			if (sum == target) {
-				System.out.println(
-						"Two pair whose sum is target is first index :>" + left + " & second index : > " + right);
+				System.out.println("Two pair sum is first index :>" + left + " & second index : > " + right);
 				System.out.println(arr[left] + " & " + arr[right]);
 				break;
 			} else if (sum < target) {

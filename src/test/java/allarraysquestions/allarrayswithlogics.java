@@ -76,6 +76,7 @@ public class allarrayswithlogics {
 		for (int x : arr)
 			freq.merge(x, 1, Integer::sum);
 		return freq;
+		
 	}
 
 	// 6. Remove duplicates from a sorted array (in place, slow-fast pointer)
