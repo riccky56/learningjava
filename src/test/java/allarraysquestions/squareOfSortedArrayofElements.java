@@ -6,7 +6,7 @@ public class squareOfSortedArrayofElements {
 
 	public static void main(String[] args) {
 
-		int[] arr = { -8, -4, -3, -1, 0, 2, 3, 6, 7 };
+		int[] arr = { -11,-8, -4, -3, -1, 0, 2, 3, 6, 7,9,13 };
 
 
 		        int[] result = new int[arr.length];
