@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class companies {
-	
-     public static WebDriver driver;
-     
+
+	public static WebDriver driver;
+
 	public static void main(String[] args) {
-		
+
 		// TODO Auto-generated method stub
-		
+
 		driver = new ChromeDriver();
 		driver.get("https://www.w3schools.com/html/html_tables.asp");
 
@@ -22,17 +22,13 @@ public class companies {
 
 		for (WebElement company : companies) {
 			System.out.println(company.getText());
-			
-			if (company.getText().equals("Island Trading"))
-			{
+
+			if (company.getText().equals("Island Trading")) {
 				System.out.println("Text Found!");
 			}
 		}
 
 		driver.quit();
-
-
-
 
 	}
 
