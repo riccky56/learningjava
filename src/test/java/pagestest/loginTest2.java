@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pagesfortest.Browsersetup;
 import pagesfortest.loginpage;
 
+// Class declaration that groups the related example logic in one place.
 public class loginTest2 extends Browsersetup{
 
 	//static WebDriver driver;

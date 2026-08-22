@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import pagesfortest.flipkartbrowser;
 
+// Class declaration that groups the related example logic in one place.
 public class flipkart extends flipkartbrowser{
 
 	
@@ -59,15 +60,20 @@ public class flipkart extends flipkartbrowser{
 //		driver.close();
 		
 		driver.findElement(By.xpath("//div[text()='Samsung Galaxy S22 5G (Phantom Black, 128 GB)']")).click();
+		// Store text data that will be processed by the program logic.
 		String parentid  = driver.getWindowHandle();
 		
 		Set<String> childid  = driver.getWindowHandles();
 		
+		// Display information to the console for the user.
 		System.out.println(parentid);
 		
+		// Display information to the console for the user.
 		System.out.println(childid);
 		
+		// Loop through each element one by one.
 		for(String handle:childid) {
+		// Check the condition before deciding whether this block should run.
 		if(!handle.equalsIgnoreCase(parentid))
 			{
 			driver.switchTo().window(handle);

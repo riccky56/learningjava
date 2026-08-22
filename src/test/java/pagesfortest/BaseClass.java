@@ -29,6 +29,7 @@ import org.apache.logging.log4j.LogManager;  //Log4j
 import org.apache.logging.log4j.Logger;  //Log4j
 
 
+// Class declaration that groups the related example logic in one place.
 public class BaseClass {
 
 public static WebDriver driver;
@@ -46,6 +47,7 @@ public Properties p;
 				
 		logger=LogManager.getLogger(this.getClass());  //lOG4J2
 				
+		// Check the condition before deciding whether this block should run.
 		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
 			DesiredCapabilities capabilities=new DesiredCapabilities();
@@ -55,18 +57,23 @@ public Properties p;
 			{
 				capabilities.setPlatform(Platform.WIN11);
 			}
+			// Check another condition if the previous condition was false.
 			else if(os.equalsIgnoreCase("linux"))
 			{
 				capabilities.setPlatform(Platform.LINUX);
 				
 			}
+			// Check another condition if the previous condition was false.
 			else if (os.equalsIgnoreCase("mac"))
 			{
 				capabilities.setPlatform(Platform.MAC);
 			}
+			// Execute this block when the earlier conditions do not match.
 			else
 			{
+				// Display information to the console for the user.
 				System.out.println("No matching os");
+				// Return the final result back to the caller.
 				return;
 			}
 			
@@ -83,6 +90,7 @@ public Properties p;
 		}
 		
 				
+		// Check the condition before deciding whether this block should run.
 		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
 
@@ -111,35 +119,45 @@ public Properties p;
 	
 	public String randomeString()
 	{
+		// Store text data that will be processed by the program logic.
 		String generatedstring=RandomStringUtils.randomAlphabetic(5);
+		// Return the final result back to the caller.
 		return generatedstring;
 	}
 	
 	public String randomeNumber()
 	{
+		// Store text data that will be processed by the program logic.
 		String generatednumber=RandomStringUtils.randomNumeric(10);
+		// Return the final result back to the caller.
 		return generatednumber;
 	}
 	
 	public String randomeAlphaNumberic()
 	{
+		// Store text data that will be processed by the program logic.
 		String generatedstring=RandomStringUtils.randomAlphabetic(3);
+		// Store text data that will be processed by the program logic.
 		String generatednumber=RandomStringUtils.randomNumeric(3);
+		// Return the final result back to the caller.
 		return (generatedstring+"@"+generatednumber);
 	}
 	
 	public String captureScreen(String tname) throws IOException {
 
+		// Store text data that will be processed by the program logic.
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 				
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		
+		// Store text data that will be processed by the program logic.
 		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
 		File targetFile=new File(targetFilePath);
 		
 		sourceFile.renameTo(targetFile);
 			
+		// Return the final result back to the caller.
 		return targetFilePath;
 
 	}

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.DataProvider;
 
+// Class declaration that groups the related example logic in one place.
 public class DataProviders {
 
 	//DataProvider 1
@@ -15,7 +16,9 @@ public class DataProviders {
 		
 		ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 		
+		// Initialize a variable that will be used in the logic.
 		int totalrows=xlutil.getRowCount("Sheet1");	
+		// Initialize a variable that will be used in the logic.
 		int totalcols=xlutil.getCellCount("Sheet1",1);
 				
 		String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password

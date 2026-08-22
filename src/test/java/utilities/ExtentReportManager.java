@@ -27,6 +27,7 @@ import pagesfortest.BaseClass;
 
 
 
+// Class declaration that groups the related example logic in one place.
 public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
@@ -38,6 +39,7 @@ public class ExtentReportManager implements ITestListener {
 		
 		/*SimpleDateFormat df=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 		Date dt=new Date();
+		// Store text data that will be processed by the program logic.
 		String currentdatetimestamp=df.format(dt);
 		*/
 		
@@ -57,13 +59,16 @@ public class ExtentReportManager implements ITestListener {
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		extent.setSystemInfo("Environemnt", "QA");
 		
+		// Store text data that will be processed by the program logic.
 		String os = testContext.getCurrentXmlTest().getParameter("os");
 		extent.setSystemInfo("Operating System", os);
 		
+		// Store text data that will be processed by the program logic.
 		String browser = testContext.getCurrentXmlTest().getParameter("browser");
 		extent.setSystemInfo("Browser", browser);
 		
 		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
+		// Check the condition before deciding whether this block should run.
 		if(!includedGroups.isEmpty()) {
 		extent.setSystemInfo("Groups", includedGroups.toString());
 		}
@@ -85,6 +90,7 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.INFO, result.getThrowable().getMessage());
 		
 		try {
+			// Store text data that will be processed by the program logic.
 			String imgPath = new BaseClass().captureScreen(result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 			
@@ -104,6 +110,7 @@ public class ExtentReportManager implements ITestListener {
 		
 		extent.flush();
 		
+		// Store text data that will be processed by the program logic.
 		String pathOfExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
 		File extentReport = new File(pathOfExtentReport);
 		
