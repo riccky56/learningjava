@@ -25,7 +25,7 @@ public class twoPointer {
 			arr[left] = arr[right];
 			arr[right] = tmp;
 			left++;
-			right--;
+ 			right--;
 		}
 
 	}

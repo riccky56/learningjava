@@ -9,12 +9,14 @@ public class longestsubstring {
 		
 		for(char c : s.toCharArray()) {
 			String ch = String.valueOf(c);
+		
 				
 			if(current.contains(ch))
 			{
 				current = current.substring(current.indexOf(ch) + 1);
 				
 			}
+			
 			current = current+ch;
 			
 			if(current.length()>longest.length()) 

@@ -8,7 +8,7 @@ public class remove_the_duplicate_and_store_into_list_of_integers {
 
 		int[] arr = {5, 2, 9, 2, 6, 4, 1, 6, 2, 5};
        
-		ArrayList<Integer> list = new ArrayList();
+		ArrayList<Integer> list = new ArrayList<>();
 		                
 		for(int a:arr) {  //to remove the duplicate and store into list of integers
 		
