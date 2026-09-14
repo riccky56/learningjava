@@ -13,8 +13,7 @@ public class readexcel2 {
 
 		String filePath = System.getProperty("user.dir") + "\\testdata\\exceldatademo.xlsx";
 
-		try (FileInputStream file = new FileInputStream(filePath);
-				XSSFWorkbook workbook = new XSSFWorkbook(file)) {
+		try (FileInputStream file = new FileInputStream(filePath); XSSFWorkbook workbook = new XSSFWorkbook(file)) {
 
 			XSSFSheet sheet = workbook.getSheet("Sheet1");
 
@@ -40,7 +39,7 @@ public class readexcel2 {
 				for (int columnIndex = 0; columnIndex < totalColumns; columnIndex++) {
 
 					XSSFCell cell = currentRow.getCell(columnIndex);
-					
+
 					if (cell != null) {
 						System.out.print(cell.toString());
 					}
