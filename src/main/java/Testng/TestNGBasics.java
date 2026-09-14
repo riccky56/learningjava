@@ -53,4 +53,12 @@ public class TestNGBasics {
 	    public void teardownSuite() {
 	        System.out.println("Suite teardown - runs once after all tests");
 	    }
+
+	 // Apply to test
+	    public class RetryableTests {
+	        @Test(retryAnalyzer = RetryAnalyzer.class)
+	        public void flakeyTest() {
+	            // Test that might fail occasionally
+	        }
+	    }
 	}
