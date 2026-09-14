@@ -40,7 +40,7 @@ public class readexcel2 {
 				for (int columnIndex = 0; columnIndex < totalColumns; columnIndex++) {
 
 					XSSFCell cell = currentRow.getCell(columnIndex);
-
+					
 					if (cell != null) {
 						System.out.print(cell.toString());
 					}
