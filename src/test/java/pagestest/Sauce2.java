@@ -3,137 +3,72 @@ package pagestest;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pagesfortest.Browsersetup;
 
-// Class declaration that groups the related example logic in one place.
-public class Sauce2 extends Browsersetup {
+@Test(singleThreaded = true)
+public class Sauce2 {
+	private WebDriver driver;
+	private WebDriverWait wait;
 
-
-    @BeforeTest
+	@BeforeMethod(alwaysRun = true)
 	public void start() {
-    	Browsersetup.startBrowser();
-		//driver.navigate().to("https://www.saucedemo.com/v1/");
-		//driver.manage().deleteAllCookies();
-
+		driver = Browsersetup.createBrowser();
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
+	@Test(invocationCount = 2)
+	public void LoginPage() {
+		login();
+		String heading = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.cssSelector(".title"))).getText();
+		Assert.assertEquals(heading, "Products");
+	}
 
+	@Test(retryAnalyzer = pagesfortest.Retry1.class)
+	public void secondtest() {
+		login();
+		logoutAndVerify();
+	}
 
-	
-    @Test(invocationCount=2)
-	public void LoginPage () throws InterruptedException {
+	@Test
+	public void thirdtest() {
+		login();
+		logoutAndVerify();
+	}
 
+	private void login() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name")))
+				.sendKeys("standard_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("login-button"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("inventory_container")));
+	}
 
-		driver.findElement(By.xpath("//input[@id = 'user-name']")).sendKeys("standard_user");
-		
-		driver.findElement(By.xpath("//input[@id = 'password']")).sendKeys("secret_sauce");
-		
-		driver.findElement(By.xpath("//input[@id = 'login-button']")).click();
-		Thread.sleep(2000);
+	private void logoutAndVerify() {
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("react-burger-menu-btn"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("logout_sidebar_link"))).click();
+		Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.id("login-button"))).isDisplayed(), "Login form should appear after logout");
+		Assert.assertEquals(driver.getTitle(), "Swag Labs");
+	}
 
-       	String A = driver.findElement(By.xpath("//*[@id = 'inventory_filter_container']")).getText();
-		// Display information to the console for the user.
-		System.out.print(A);
-		// Store a true or false state needed for conditional logic.
-		boolean result = false;
-		// Check the condition before deciding whether this block should run.
-		if(A.contains("Products")) {
-			result = true;
+	@AfterMethod(alwaysRun = true)
+	public void cleanupMethod() {
+		if (driver != null) {
+			try {
+				driver.quit();
+			} finally {
+				driver = null;
+				wait = null;
+			}
 		}
-
-		Assert.assertEquals(true, result);
-
-		// Display information to the console for the user.
-		System.out.println("A");
-		
-
 	}
-
-
-    @Test(retryAnalyzer = pagesfortest.Retry1.class)
-	public void secondtest () throws InterruptedException {
-
-
-		driver.findElement(By.xpath("//input[@id = 'user-name']")).sendKeys("standard_user");
-		driver.findElement(By.xpath("//input[@id = 'password']")).sendKeys("secret_sauce");
-		driver.findElement(By.xpath("//input[@id = 'login-button']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[text() = 'Open Menu']")).click();
-		
-	    Thread.sleep(2000);
-		
-			
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id= 'logout_sidebar_link']"))).click(); 
-		//click will also work here along with the wait but we can also take the click action in the next line. 
-		
-		
-		//driver.findElement(By.xpath("//a[@id= 'logout_sidebar_link']")).click();                                   
-		Thread.sleep(3000);
-		
-		// Store text data that will be processed by the program logic.
-		String expectedTitle = "Swag Labs";
-		// Store text data that will be processed by the program logic.
-		String actualTitle = driver.getTitle();
-		// Display information to the console for the user.
-		System.out.println(actualTitle);
-		
-		Assert.assertEquals(actualTitle,expectedTitle);
-		//wait.until(ExpectedConditions.urlMatches("https://www.saucedemo.com/v1/index.html"));
-		
-	
-
-	}
-    
-    @Test
-	public void thirdtest () throws InterruptedException {
-
-
-		driver.findElement(By.xpath("//input[@id = 'user-name']")).sendKeys("standard_user");
-		driver.findElement(By.xpath("//input[@id = 'password']")).sendKeys("secret_sauce");
-		driver.findElement(By.xpath("//input[@id = 'login-button']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[text() = 'Open Menu']")).click();
-		
-	    Thread.sleep(2000);
-		
-			
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id= 'logout_sidebar_link']"))).click(); 
-		//click will also work here along with the wait but we can also take the click action in the next line. 
-		
-		
-		//driver.findElement(By.xpath("//a[@id= 'logout_sidebar_link']")).click();                                   
-		Thread.sleep(3000);
-		
-		// Store text data that will be processed by the program logic.
-		String expectedTitle = "Swag Labs";
-		// Store text data that will be processed by the program logic.
-		String actualTitle = driver.getTitle();
-		// Display information to the console for the user.
-		System.out.println(actualTitle);
-		
-		Assert.assertEquals(actualTitle,expectedTitle);
-		//wait.until(ExpectedConditions.urlMatches("https://www.saucedemo.com/v1/index.html"));
-		
-	
-
-	}
-
-
-
-    @AfterClass
-	public void cleanupMethod(){
-
-		driver.close();
-	}
-
 }

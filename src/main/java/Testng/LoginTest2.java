@@ -8,7 +8,6 @@ public class LoginTest2 extends BaseTest {
 
 	@BeforeClass
 	public void setUpTest() {
-		super.setUp();
 		loginPage = new LoginPage(driver);
 	}
 
@@ -26,10 +25,5 @@ public class LoginTest2 extends BaseTest {
 	@DataProvider(name = "loginCredentials")
 	public Object[][] getLoginData() {
 		return new Object[][] { { "user@example.com", "password123" }, { "another@example.com", "password456" } };
-	}
-
-	@AfterClass
-	public void tearDownTest() {
-		super.tearDown();
 	}
 }
