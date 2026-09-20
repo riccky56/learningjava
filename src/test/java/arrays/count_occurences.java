@@ -1,7 +1,7 @@
 package arrays;
-// Class declaration that groups the related example logic in one place.
+
 public class count_occurences {
-	// Main method where program execution starts.
+	
 	public static void main(String[] args) {
 
 		// Store text data that will be processed by the program logic.
