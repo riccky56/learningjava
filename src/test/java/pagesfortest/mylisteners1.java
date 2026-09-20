@@ -28,6 +28,5 @@ public class mylisteners1 implements ITestListener{
 		// Display information to the console for the user.
 		System.out.println("on skipped");
 	}
-	
 
 }
