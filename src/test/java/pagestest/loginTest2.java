@@ -25,7 +25,10 @@ public class loginTest2 extends Browsersetup{
 	}
 
 
-	@Test
+	@Test(
+			retryAnalyzer = pagesfortest.Retry1.class,
+			description = "This test case is to verify login functionality with valid credentials"
+	)
 	public void first() {
         
 		loginpage log = new loginpage(driver);
