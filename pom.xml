@@ -13,6 +13,7 @@
  <properties>
 
 	<maven.compiler.release>21</maven.compiler.release>
+		   <selenium.version>4.49.0</selenium.version>
    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
 
@@ -22,14 +23,14 @@
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
-	    <version>4.29.0</version>
+	    <version>${selenium.version}</version>
 	</dependency>
 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-manager -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-manager</artifactId>
-    <version>4.29.0</version>
+	<version>${selenium.version}</version>
 </dependency>
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 	<dependency>

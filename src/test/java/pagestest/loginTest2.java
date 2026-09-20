@@ -1,5 +1,6 @@
 package pagestest;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -36,10 +37,17 @@ public class loginTest2 extends Browsersetup{
 		
 		log.loginbutton();
 
-		
-		driver.close();
+	}
 
-
+	@AfterClass(alwaysRun = true)
+	public void tearDown() {
+		if (driver != null) {
+			try {
+				driver.quit();
+			} finally {
+				driver = null;
+			}
+		}
 	}
 
 }
