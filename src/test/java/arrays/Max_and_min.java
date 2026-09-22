@@ -25,7 +25,7 @@ public class Max_and_min {
 			if(a[i]>large) {
 				large=a[i];
 			}
-			
+		
 		}
 		
 		// Initialize a variable that will be used in the logic.
