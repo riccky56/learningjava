@@ -8,6 +8,8 @@ public class everything {
 
 		// Store text data that will be processed by the program logic.
 		String a = "Test1233Gtsag!@#$dwdb1234";
+		String b = a.replaceAll("[^a-zA-Z0-9]", "");
+		System.out.println(b);
 
 		// Store text data that will be processed by the program logic.
 		String letters = "";
