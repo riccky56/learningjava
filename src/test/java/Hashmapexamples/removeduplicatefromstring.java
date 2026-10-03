@@ -11,7 +11,6 @@ public class removeduplicatefromstring {
 
 		// This string will store characters only once, in their original order.
 		String b = "";
-
 		// Loop through each character of the input string.
 		for(int i=0; i<=a.length()-1; i++) {
 			// Get one character at the current index.
