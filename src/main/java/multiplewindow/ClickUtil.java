@@ -74,15 +74,11 @@ public class ClickUtil {
 	                "Could not click " + locator + " after " + MAX_RETRIES + " attempts");
 	    }
 
-	    private void waitForOverlaysToDisappear() {
+	    private void waitForOverlaysToDisappear() throws TimeoutException {
 	        // Short wait: if no overlay exists we don't want to slow every click
 	        WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(3));
 	        for (By overlay : OVERLAYS) {
-	            try {
-	                shortWait.until(ExpectedConditions.invisibilityOfElementLocated(overlay));
-	            } catch (TimeoutException ignored) {
-	                // Overlay still visible, the click retry logic will deal with it
-	            }
+	            shortWait.until(ExpectedConditions.invisibilityOfElementLocated(overlay));
 	        }
 	    }
 
@@ -103,4 +99,4 @@ public class ClickUtil {
 	        System.out.println("[ClickUtil] " + msg);   // swap for Log4j/SLF4J
 	    }
 	}
-}
+
