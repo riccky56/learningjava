@@ -34,7 +34,7 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         ExtentTest t = ExtentTestManager.getTest();
         t.log(Status.FAIL, result.getThrowable());
-        String base64 = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+        String base64 = ((TakesScreenshot) DriverManager.getDrivers()).getScreenshotAs(OutputType.BASE64);
         t.fail("Screenshot on failure",
                MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
     }

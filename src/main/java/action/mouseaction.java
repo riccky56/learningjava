@@ -24,6 +24,15 @@ public class mouseaction {
 		
 		act.contextClick(mac);
 		act.doubleClick(desktop);
+		
+		//ctrl +A
+		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).perform();
+		//ctrl +C
+		act.keyDown(Keys.CONTROL).sendKeys("C").keyUp(Keys.CONTROL).perform();
+		
+		//ctrl + V
+		act.keyDown(Keys.CONTROL).sendKeys("V").keyUp(Keys.CONTROL).perform();
+		
 	}
 
 }
