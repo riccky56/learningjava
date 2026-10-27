@@ -29,7 +29,6 @@ public class convert_to_a1b2c3d4e5f6 {
 				// Store or update the current value in the map.
 				hashmap.put(c, 1);
 			}
-
 		}
 		// Display information to the console for the user.
 		System.out.println(hashmap);

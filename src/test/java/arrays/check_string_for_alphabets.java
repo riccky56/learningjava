@@ -20,7 +20,7 @@ public class check_string_for_alphabets {
 			int sum = Integer.parseInt(a) + Integer.parseInt(b);
 			
 			result = String.valueOf(sum);
-			
+		
 		} else {
 			
 			// Update the variable based on the current calculation.

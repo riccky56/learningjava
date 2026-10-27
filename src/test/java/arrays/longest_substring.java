@@ -19,6 +19,7 @@ public class longest_substring {
               if(current.contains(ch))
               {
 				  current = current.substring(current.indexOf(ch)+1);
+				 
 			  }
               
 			current +=ch;

@@ -38,6 +38,7 @@ public class reverseonlyconsonantsfromeachWord {
 				}
 				
 			}
+			
 			words[i]= new String (ch);
 			i++;
 				

@@ -24,7 +24,7 @@ public class GetAllProducts {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.className("shelf-item")));
-
+		
 		List<WebElement> products = driver.findElements(By.className("shelf-item"));
 
 		// Display information to the console for the user.

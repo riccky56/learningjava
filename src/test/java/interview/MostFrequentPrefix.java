@@ -13,10 +13,10 @@ public class MostFrequentPrefix {
 		for (String word : arr) {
 			// Loop through the data using an index or counter.
 			for (int i = 1; i <= word.length(); i++) {
-				// Store text data that will be processed by the program logic.
+				
 				String prefix = word.substring(0, i);
 				
-				// Store or update the current value in the map.
+				
 				map.put(prefix, map.getOrDefault(prefix, 0) + 1);
 			}
 		}

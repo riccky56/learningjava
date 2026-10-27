@@ -14,7 +14,7 @@ public class Testclass {
 				.enterPassword("secret123")
 				.clickLogin(); // chain
 																														// now
-																														// continues
+			// continues
 																														// on
 																														// DashboardPage
 
