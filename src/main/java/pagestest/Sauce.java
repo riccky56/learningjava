@@ -61,7 +61,7 @@ public class Sauce extends Browsersetup {
     @Test(retryAnalyzer = pagesfortest.Retry.class)
 	public void secondtest () throws InterruptedException {
 
-
+    	
 		driver.findElement(By.xpath("//input[@id = 'user-name']")).sendKeys("standard_user");
 		driver.findElement(By.xpath("//input[@id = 'password']")).sendKeys("secret_sauce");
 		driver.findElement(By.xpath("//input[@id = 'login-button']")).click();
@@ -70,11 +70,9 @@ public class Sauce extends Browsersetup {
 		
 	    Thread.sleep(2000);
 		
-			
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id= 'logout_sidebar_link']"))).click(); 
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id= 'logout_sidebar_link']"))).click();
 		//click will also work here along with the wait but we can also take the click action in the next line. 
-		
 		
 		//driver.findElement(By.xpath("//a[@id= 'logout_sidebar_link']")).click();                                   
 		Thread.sleep(3000);
@@ -89,8 +87,6 @@ public class Sauce extends Browsersetup {
 		Assert.assertEquals(actualTitle,expectedTitle);
 		//wait.until(ExpectedConditions.urlMatches("https://www.saucedemo.com/v1/index.html"));
 		
-	
-
 	}
     
     @Test
@@ -109,8 +105,7 @@ public class Sauce extends Browsersetup {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id= 'logout_sidebar_link']"))).click(); 
 		//click will also work here along with the wait but we can also take the click action in the next line. 
-		
-		
+				
 		//driver.findElement(By.xpath("//a[@id= 'logout_sidebar_link']")).click();                                   
 		Thread.sleep(3000);
 		

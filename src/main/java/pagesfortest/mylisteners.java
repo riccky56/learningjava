@@ -5,29 +5,29 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 // Class declaration that groups the related example logic in one place.
-public class mylisteners implements ITestListener{
-	
+public class mylisteners implements ITestListener {
+
 	public void onTestStart(ITestResult result) {
-	    // not implemented
-	  }
+		// not implemented
+	}
 
-	 public void onTestSuccess(ITestResult result) {
-	    
-		 // Display information to the console for the user.
-		 System.out.println("on success");
-	  }
+	@Override
+	public void onTestSuccess(ITestResult result) {
 
-	  
+		// Display information to the console for the user.
+		System.out.println("on success");
+	}
+
+	@Override
 	public void onTestFailure(ITestResult result) {
-	    // Display information to the console for the user.
-	    System.out.println("on failure");
-	  }
+		// Display information to the console for the user.
+		System.out.println("on failure");
+	}
 
-	  
+	@Override
 	public void onTestSkipped(ITestResult result) {
 		// Display information to the console for the user.
 		System.out.println("on skipped");
 	}
-	
 
 }
