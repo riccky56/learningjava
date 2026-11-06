@@ -52,6 +52,7 @@ public class ScrollAndCaptureTableValues {
 				Thread.sleep(800); // swap for WebDriverWait on row count/staleness in real code
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
+				
 			}
 
 			// 4. Capture again after scroll

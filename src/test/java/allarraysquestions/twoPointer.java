@@ -1,4 +1,4 @@
-package allarraysquestions;
+  package allarraysquestions;
 
 // Class declaration that groups the related example logic in one place.
 public class twoPointer {
